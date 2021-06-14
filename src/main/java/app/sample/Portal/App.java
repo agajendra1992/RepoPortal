@@ -1,13 +1,27 @@
 package app.sample.Portal;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class App {
+	public static WebDriver driver;
+
+	public static void main(String[] args) throws InterruptedException {
+
+		System.setProperty("webdriver.chrome.driver",
+				"E:\\eclipse_Workspace\\WorkspaceTesting\\latestCucumberSeleniumFramework-master\\src\\test\\resources\\drivers\\chromedriver.exe");
+
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.naukri.com/");
+		driver.findElement(By.xpath("//div[text()='Login']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//input[@placeholder='Enter your active Email ID / Username']"))
+				.sendKeys("gajendrasaxena");
+		driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("9806480683");
+		driver.findElement(By.xpath("//button[@class='btn-primary loginButton']")).click();
+		driver.quit();
+	}
 }
