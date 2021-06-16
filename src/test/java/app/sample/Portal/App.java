@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 public class App {
 	public static WebDriver driver;
 
-	// public static void main(String[] args) throws InterruptedException {
 	@Test
 	public void loadbrowser() throws InterruptedException, IOException {
 		System.setProperty("webdriver.chrome.driver",
