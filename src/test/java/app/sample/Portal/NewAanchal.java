@@ -25,7 +25,7 @@ public class NewAanchal {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.naukri.com/");
-		
+
 		driver.findElement(By.xpath("//div[text()='Login']")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[@placeholder='Enter your active Email ID / Username']"))
@@ -43,22 +43,23 @@ public class NewAanchal {
 		driver.findElement(By.xpath("//div[@class=\"uploadCont\"]")).click();
 		Thread.sleep(5000);
 
-		StringSelection stringSelection = new StringSelection(
-				"C://Users//user//Desktop//DESk//Resume (1).doc");
-				// StringSelection ss = new
-		// StringSelection("C://Users//user//Desktop//DESk//Gajendra_Saxena_Resume.docx");
+		StringSelection stringsel = new StringSelection("C:\\Users\\user\\Desktop\\DESk\\Aanchal_Resume_Update.doc");
 
-		 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-		
-		  Robot robot = new Robot(); robot.setAutoDelay(5);
-		  robot.keyPress(KeyEvent.VK_ENTER); robot.keyRelease(KeyEvent.VK_ENTER);
-		  robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_V);
-		  robot.keyRelease(KeyEvent.VK_V); robot.keyRelease(KeyEvent.VK_CONTROL);
-		  robot.keyPress(KeyEvent.VK_ENTER);
-		  robot.keyRelease(KeyEvent.VK_ENTER);
-			 driver.quit();
-			 Runtime runtime = Runtime.getRuntime();
-			 runtime.exec("taskkill /im chromedriver.exe /f");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringsel, null);
+
+		Robot robot = new Robot();
+		robot.setAutoDelay(5);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		driver.quit();
+		Runtime runtime = Runtime.getRuntime();
+		runtime.exec("taskkill /im chromedriver.exe /f");
 	}
 
 }
