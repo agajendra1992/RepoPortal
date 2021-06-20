@@ -41,11 +41,12 @@ public class NewAanchal {
 		Thread.sleep(5000);
 
 		driver.findElement(By.xpath("//div[@class=\"uploadCont\"]")).click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 
 		StringSelection stringsel = new StringSelection("C:\\Users\\user\\Desktop\\DESk\\Aanchal_Resume_Update.doc");
 
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringsel, null);
+		Thread.sleep(2000);
 
 		Robot robot = new Robot();
 		robot.setAutoDelay(5);
