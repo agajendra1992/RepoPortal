@@ -57,8 +57,8 @@ public class NewSample {
 		  robot.keyPress(KeyEvent.VK_ENTER);
 		  robot.keyRelease(KeyEvent.VK_ENTER);
 			 driver.quit();
-			 Runtime runtime = Runtime.getRuntime();
-			 runtime.exec("taskkill /im chromedriver.exe /f");
+			 //Runtime runtime = Runtime.getRuntime();
+			 //runtime.exec("taskkill /im chromedriver.exe /f");
 	}
 
 }
