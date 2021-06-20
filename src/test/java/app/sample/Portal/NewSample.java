@@ -43,11 +43,9 @@ public class NewSample {
 		driver.findElement(By.xpath("//div[@class=\"uploadCont\"]")).click();
 		Thread.sleep(5000);
 
-		StringSelection stringSelection = new StringSelection(
-				"C:\\Users\\user\\Desktop\\DESk\\Gajendra_Saxena_Resume.docx");
-				// StringSelection ss = new
-		// StringSelection("C://Users//user//Desktop//DESk//Gajendra_Saxena_Resume.docx");
-
+		StringSelection stringSelection = new StringSelection("C:\\Users\\user\\Desktop\\DESk\\Gajendra_Saxena_Resume.docx");
+		
+		Thread.sleep(2000);
 		 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 		
 		  Robot robot = new Robot(); robot.setAutoDelay(5);
@@ -57,6 +55,7 @@ public class NewSample {
 		  robot.keyPress(KeyEvent.VK_ENTER);
 		  robot.keyRelease(KeyEvent.VK_ENTER);
 			 driver.quit();
+			 Thread.sleep(5000);
 			 //Runtime runtime = Runtime.getRuntime();
 			 //runtime.exec("taskkill /im chromedriver.exe /f");
 	}
