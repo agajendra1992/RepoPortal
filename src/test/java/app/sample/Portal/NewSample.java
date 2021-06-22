@@ -25,7 +25,8 @@ public class NewSample {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.naukri.com/");
-		
+		Thread.sleep(2000);
+
 		driver.findElement(By.xpath("//div[text()='Login']")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[@placeholder='Enter your active Email ID / Username']"))
@@ -54,7 +55,7 @@ public class NewSample {
 		  robot.keyRelease(KeyEvent.VK_V); robot.keyRelease(KeyEvent.VK_CONTROL);
 		  robot.keyPress(KeyEvent.VK_ENTER);
 		  robot.keyRelease(KeyEvent.VK_ENTER);
-		  Thread.sleep(8000);
+		  Thread.sleep(5000);
 			 driver.quit();
 			 Thread.sleep(5000);
 			 //Runtime runtime = Runtime.getRuntime();

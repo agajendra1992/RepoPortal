@@ -25,6 +25,7 @@ public class NewAanchal {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.naukri.com/");
+		Thread.sleep(2000);
 
 		driver.findElement(By.xpath("//div[text()='Login']")).click();
 		Thread.sleep(5000);
@@ -58,7 +59,7 @@ public class NewAanchal {
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 		driver.quit();
 		Runtime runtime = Runtime.getRuntime();
 		runtime.exec("taskkill /im chromedriver.exe /f");
