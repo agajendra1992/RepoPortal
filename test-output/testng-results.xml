@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32258" started-at="2021-06-20T11:37:31 IST" finished-at="2021-06-20T11:38:03 IST">
+  <suite name="Default suite" duration-ms="63408" started-at="2021-06-20T11:56:07 IST" finished-at="2021-06-20T11:57:10 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32258" started-at="2021-06-20T11:37:31 IST" finished-at="2021-06-20T11:38:03 IST">
-      <class name="app.sample.Portal.NewAanchal">
-        <test-method status="PASS" signature="applaunch()[pri:0, instance:app.sample.Portal.NewAanchal@33f88ab]" name="applaunch" duration-ms="32217" started-at="2021-06-20T11:37:31 IST" finished-at="2021-06-20T11:38:03 IST">
+    <test name="Default test" duration-ms="63408" started-at="2021-06-20T11:56:07 IST" finished-at="2021-06-20T11:57:10 IST">
+      <class name="app.sample.Portal.NewSample">
+        <test-method status="PASS" signature="applaunch()[pri:0, instance:app.sample.Portal.NewSample@33f88ab]" name="applaunch" duration-ms="63288" started-at="2021-06-20T11:56:07 IST" finished-at="2021-06-20T11:57:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applaunch -->
-      </class> <!-- app.sample.Portal.NewAanchal -->
+      </class> <!-- app.sample.Portal.NewSample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

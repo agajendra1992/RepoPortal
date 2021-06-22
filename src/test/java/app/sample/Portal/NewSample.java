@@ -54,6 +54,7 @@ public class NewSample {
 		  robot.keyRelease(KeyEvent.VK_V); robot.keyRelease(KeyEvent.VK_CONTROL);
 		  robot.keyPress(KeyEvent.VK_ENTER);
 		  robot.keyRelease(KeyEvent.VK_ENTER);
+		  Thread.sleep(10000);
 			 driver.quit();
 			 Thread.sleep(5000);
 			 //Runtime runtime = Runtime.getRuntime();
