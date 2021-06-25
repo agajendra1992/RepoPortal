@@ -44,6 +44,7 @@ public class UpdateNameSaxenaGajendra {
 		driver.findElement(By.id("name")).sendKeys("Saxena Gajendra");
 		driver.findElement(By.id("saveBasicDetailsBtn")).click();
 		System.out.println("Name Update SuccessFully");
+		driver.close();
 
 	}
 }
