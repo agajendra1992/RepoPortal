@@ -1,10 +1,6 @@
 package app.sample.Portal;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -15,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class NewSample {
+public class UpdateNameSaxenaGajendra {
 	public static WebDriver driver;
 
 	@Test
@@ -23,9 +19,9 @@ public class NewSample {
 		System.setProperty("webdriver.chrome.driver",
 				"E:\\eclipse_Workspace\\WorkspaceTesting\\latestCucumberSeleniumFramework-master\\src\\test\\resources\\drivers\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
-		//options.addArguments("headless");
-		//options.addArguments("window-size=1200x600");
-		driver = new ChromeDriver();
+		options.addArguments("headless");
+		options.addArguments("window-size=1200x600");
+		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://www.naukri.com/");
 		Thread.sleep(2000);
@@ -43,31 +39,10 @@ public class NewSample {
 		actions.moveToElement(mynaukari).moveToElement(EditProfile).click().build().perform();
 		EditProfile.click();
 		Thread.sleep(5000);
+		driver.findElement(By.xpath("(//*[text()='Edit'])[2]")).click();
+		driver.findElement(By.id("name")).sendKeys("Saxena Gajendra");
+		driver.findElement(By.id("saveBasicDetailsBtn")).click();
+		System.out.println("Name Update SuccessFully");
 
-		driver.findElement(By.xpath("//div[@class=\"uploadCont\"]")).click();
-		Thread.sleep(5000);
-
-		StringSelection stringSelection = new StringSelection(
-				"C:\\Users\\user\\Desktop\\DESk\\Gajendra_Saxena_Resume.docx");
-
-		Thread.sleep(2000);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-
-		Robot robot = new Robot();
-		robot.setAutoDelay(5);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		Thread.sleep(5000);
-		driver.quit();
-		Thread.sleep(5000);
-		// Runtime runtime = Runtime.getRuntime();
-		// runtime.exec("taskkill /im chromedriver.exe /f");
 	}
-
 }
