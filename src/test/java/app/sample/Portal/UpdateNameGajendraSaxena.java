@@ -40,6 +40,7 @@ public class UpdateNameGajendraSaxena {
 		EditProfile.click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("(//*[text()='Edit'])[2]")).click();
+		driver.findElement(By.id("name")).clear();
 		driver.findElement(By.id("name")).sendKeys("Gajendra Saxena");
 		driver.findElement(By.id("saveBasicDetailsBtn")).click();
 		System.out.println("Name Update SuccessFully");
