@@ -20,8 +20,7 @@ public class NewSample {
 
 	@Test
 	public void applaunch() throws InterruptedException, IOException, AWTException {
-		System.setProperty("webdriver.chrome.driver",
-				"E:\\eclipse_Workspace\\WorkspaceTesting\\latestCucumberSeleniumFramework-master\\src\\test\\resources\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\eclipse_Workspace\\chromedriver\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("headless");
 		//options.addArguments("window-size=1200x600");
@@ -54,7 +53,6 @@ public class NewSample {
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 
 		Robot robot = new Robot();
-		robot.setAutoDelay(5);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -64,6 +62,7 @@ public class NewSample {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(5000);
+		
 		driver.quit();
 		Thread.sleep(5000);
 		// Runtime runtime = Runtime.getRuntime();

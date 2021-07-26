@@ -16,8 +16,7 @@ public class UpdateNameSaxenaGajendra {
 
 	@Test
 	public void applaunch() throws InterruptedException, IOException, AWTException {
-		System.setProperty("webdriver.chrome.driver",
-				"E:\\eclipse_Workspace\\WorkspaceTesting\\latestCucumberSeleniumFramework-master\\src\\test\\resources\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\eclipse_Workspace\\chromedriver\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
 		options.addArguments("window-size=1200x600");
