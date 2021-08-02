@@ -3,12 +3,12 @@
 <suite name="Suite">
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="app.sample.Portal.UpdateNameAanchalAsthana" />
-			<class name="app.sample.Portal.UpdateNameAsthanaAanchal" />
+		<!-- 	<class name="app.sample.Portal.UpdateNameAanchalAsthana" /> -->
+			<!-- <class name="app.sample.Portal.UpdateNameAsthanaAanchal" /> -->
 			<class name="app.sample.Portal.UpdateNameGajendraSaxena" />
 			<class name="app.sample.Portal.UpdateNameSaxenaGajendra" />
 			<class name="app.sample.Portal.NewSample" />
-			<class name="app.sample.Portal.NewAanchal" />
+	<!-- 		<class name="app.sample.Portal.NewAanchal" /> -->
 
 		</classes>
 	</test> <!-- Test -->
