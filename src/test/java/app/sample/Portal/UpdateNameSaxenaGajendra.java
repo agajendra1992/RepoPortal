@@ -18,8 +18,8 @@ public class UpdateNameSaxenaGajendra {
 	public void applaunch() throws InterruptedException, IOException, AWTException {
 		System.setProperty("webdriver.chrome.driver", "E:\\eclipse_Workspace\\chromedriver\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("headless");
-		options.addArguments("window-size=1200x600");
+		//options.addArguments("headless");
+		//options.addArguments("window-size=1200x600");
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://www.naukri.com/");

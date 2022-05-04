@@ -47,7 +47,7 @@ public class NewSample {
 		Thread.sleep(5000);
 
 		StringSelection stringSelection = new StringSelection(
-				"C:\\Users\\user\\Desktop\\DESk\\Gajendra_Saxena_Resume.docx");
+				"C:\\Users\\user\\Desktop\\Gajendra_Resume.docx");
 
 		Thread.sleep(2000);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
