@@ -7,13 +7,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class App {
 	public static WebDriver driver;
 
 	@Test
 	public void loadbrowser() throws InterruptedException, IOException {
-		System.setProperty("webdriver.chrome.driver",
-				"E:\\eclipse_Workspace\\WorkspaceTesting\\latestCucumberSeleniumFramework-master\\src\\test\\resources\\drivers\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver",
+	//			"E:\\eclipse_Workspace\\WorkspaceTesting\\latestCucumberSeleniumFramework-master\\src\\test\\resources\\drivers\\chromedriver.exe");
+		WebDriverManager.chromedriver().version("103.0").setup();
 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();

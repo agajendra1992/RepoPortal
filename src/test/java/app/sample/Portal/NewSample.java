@@ -15,12 +15,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class NewSample {
 	public static WebDriver driver;
 
 	@Test
 	public void applaunch() throws InterruptedException, IOException, AWTException {
-		System.setProperty("webdriver.chrome.driver", "E:\\eclipse_Workspace\\chromedriver\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "E:\\eclipse_Workspace\\chromedriver\\chromedriver.exe");
+		WebDriverManager.chromedriver().version("103.0").setup();
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("headless");
 		//options.addArguments("window-size=1200x600");
