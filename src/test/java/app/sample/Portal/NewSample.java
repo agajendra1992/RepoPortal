@@ -23,7 +23,7 @@ public class NewSample {
 	@Test
 	public void applaunch() throws InterruptedException, IOException, AWTException {
 		//System.setProperty("webdriver.chrome.driver", "E:\\eclipse_Workspace\\chromedriver\\chromedriver.exe");
-		WebDriverManager.chromedriver().version("103.0").setup();
+		WebDriverManager.chromedriver().driverVersion("103.0").setup();
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("headless");
 		//options.addArguments("window-size=1200x600");

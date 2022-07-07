@@ -16,8 +16,8 @@ public class App {
 	public void loadbrowser() throws InterruptedException, IOException {
 //		System.setProperty("webdriver.chrome.driver",
 	//			"E:\\eclipse_Workspace\\WorkspaceTesting\\latestCucumberSeleniumFramework-master\\src\\test\\resources\\drivers\\chromedriver.exe");
-		WebDriverManager.chromedriver().version("103.0").setup();
-
+		//WebDriverManager.chromedriver().version("103.0").setup();
+		WebDriverManager.chromedriver().driverVersion("103.0").setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.naukri.com/");

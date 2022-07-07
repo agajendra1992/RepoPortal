@@ -20,16 +20,20 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
-			
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.5</version>
+			<version>4.0.0</version>
 		</dependency>
-
-
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.1.0</version>
+</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>
@@ -43,9 +47,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				<configuration>
-				<testFailureIgnore>true </testFailureIgnore>
+					<testFailureIgnore>true </testFailureIgnore>
 					<suiteXmlFiles>
-					<!-- src/test/resources/testSuites/testng.xml -->
+						<!-- src/test/resources/testSuites/testng.xml -->
 						<suiteXmlFile>testNg.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>

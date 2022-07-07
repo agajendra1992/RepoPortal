@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-05T00:07:10 IST" name="Suite" finished-at="2022-05-05T00:08:57 IST" duration-ms="106311">
+  <suite started-at="2022-07-07T23:41:55 IST" name="Default suite" finished-at="2022-07-07T23:42:31 IST" duration-ms="35967">
     <groups>
     </groups>
-    <test started-at="2022-05-05T00:07:10 IST" name="Test" finished-at="2022-05-05T00:08:57 IST" duration-ms="106311">
+    <test started-at="2022-07-07T23:41:55 IST" name="Default test" finished-at="2022-07-07T23:42:31 IST" duration-ms="35967">
       <class name="app.sample.Portal.UpdateNameGajendraSaxena">
-        <test-method signature="applaunch()[pri:0, instance:app.sample.Portal.UpdateNameGajendraSaxena@62e7f11d]" started-at="2022-05-05T00:07:10 IST" name="applaunch" finished-at="2022-05-05T00:07:38 IST" duration-ms="27803" status="PASS">
+        <test-method signature="applaunch()[pri:0, instance:app.sample.Portal.UpdateNameGajendraSaxena@28f3b248]" started-at="2022-07-07T23:41:55 IST" name="applaunch" finished-at="2022-07-07T23:42:31 IST" duration-ms="35910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applaunch -->
       </class> <!-- app.sample.Portal.UpdateNameGajendraSaxena -->
-      <class name="app.sample.Portal.UpdateNameSaxenaGajendra">
-        <test-method signature="applaunch()[pri:0, instance:app.sample.Portal.UpdateNameSaxenaGajendra@2e55dd0c]" started-at="2022-05-05T00:07:38 IST" name="applaunch" finished-at="2022-05-05T00:08:10 IST" duration-ms="32117" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- applaunch -->
-      </class> <!-- app.sample.Portal.UpdateNameSaxenaGajendra -->
-      <class name="app.sample.Portal.NewSample">
-        <test-method signature="applaunch()[pri:0, instance:app.sample.Portal.NewSample@74455848]" started-at="2022-05-05T00:08:10 IST" name="applaunch" finished-at="2022-05-05T00:08:57 IST" duration-ms="46330" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- applaunch -->
-      </class> <!-- app.sample.Portal.NewSample -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
