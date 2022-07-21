@@ -38,7 +38,7 @@ public class NewSample {
 				.sendKeys("gajendrasaxena");
 		driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("9806480683");
 		driver.findElement(By.xpath("//button[@class='btn-primary loginButton']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		WebElement mynaukari = driver.findElement(By.xpath("//div[text()='My Naukri']"));
 		WebElement EditProfile = driver.findElement(By.xpath("//a[text()='Edit Profile']"));
 		Actions actions = new Actions(driver);

@@ -11,16 +11,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class NewAanchal {
 	public static WebDriver driver;
 
 	@Test
 	public void applaunch() throws InterruptedException, IOException, AWTException {
-		System.setProperty("webdriver.chrome.driver", "E:\\eclipse_Workspace\\chromedriver\\chromedriver.exe");
-
+		//System.setProperty("webdriver.chrome.driver", "E:\\eclipse_Workspace\\chromedriver\\chromedriver.exe");
+		WebDriverManager.chromedriver().driverVersion("103.0").setup();
+		ChromeOptions options = new ChromeOptions();
+		//options.addArguments("headless");
+		//options.addArguments("window-size=1200x600");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.naukri.com/");
@@ -32,7 +38,7 @@ public class NewAanchal {
 				.sendKeys("aanchal.asthana23sep@gmail.com");
 		driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("coolasthana");
 		driver.findElement(By.xpath("//button[@class='btn-primary loginButton']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		WebElement mynaukari = driver.findElement(By.xpath("//div[text()='My Naukri']"));
 		WebElement EditProfile = driver.findElement(By.xpath("//a[text()='Edit Profile']"));
 		Actions actions = new Actions(driver);
@@ -41,15 +47,15 @@ public class NewAanchal {
 		Thread.sleep(5000);
 
 		driver.findElement(By.xpath("//div[@class=\"uploadCont\"]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 
-		StringSelection stringsel = new StringSelection("C:\\Users\\user\\Desktop\\DESk\\Aanchal_Resume_Update.doc");
+		StringSelection stringSelection = new StringSelection(
+				"C:\\Users\\user\\Desktop\\aanchal_cv.doc");
 
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringsel, null);
 		Thread.sleep(2000);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 
 		Robot robot = new Robot();
-		robot.setAutoDelay(5);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -59,9 +65,11 @@ public class NewAanchal {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(5000);
+		
 		driver.quit();
-		Runtime runtime = Runtime.getRuntime();
-		runtime.exec("taskkill /im chromedriver.exe /f");
+		Thread.sleep(5000);
+		// Runtime runtime = Runtime.getRuntime();
+		// runtime.exec("taskkill /im chromedriver.exe /f");
 	}
 
 }
